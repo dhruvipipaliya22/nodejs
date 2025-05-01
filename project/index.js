@@ -7,11 +7,13 @@ const app=express();
 app.use(express.json());
 app.use(cors());
 // user router
-app.use("/api/users",router)
+// /api/v1/users
+app.use("/api/users",router);
+
 console.log(process.env.PORT);
 const PORT=process.env.PORT||8090;
 
 app.listen(PORT,()=>{
     console.log(`server is listening on port ${PORT}`);
     dbconnect();
-})
+});
