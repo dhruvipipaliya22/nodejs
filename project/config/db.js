@@ -6,7 +6,7 @@ const dbconnect = async () => {
         console.log("conecte to mongoose");
 
     } catch (error) {
-        console.log("error", error);
+        console.log(error);
     }
 }
 
